@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Numpty Physics</title>
+</head>
+<body>
+<h1>Numpty Physics</h1>
+
+Harness gravity with your crayon and set about creating blocks, ramps,
+levers, pulleys and whatever else you fancy to get the little red
+thing to the little yellow thing.<br>
+
+Numpty Physics is a drawing puzzle game in the spirit (and style?)
+of <a href="http://kloonigames.com/crayon">Crayon Physics</a> using
+the same excellent <a href="http://www.box2d.org">Box2D engine</a>.
+Not though that I've not actually played CP so the experience may be
+very different.<p>
+
+Numpty Physics is released under the GPL with the hope that others
+with more spare time than myself will be able to round it out, polish
+it, and above all create more levels (using the built in editor).<p>
+
+Comments, questions, flames and levels
+to <a href="mailto:numptyphysics-users@garage.maemo.org">numptyphysics-users@garage.maemo.org</a>.<p>
+
+<h2>Screenshots</h2>
+
+<a href="./images/np_title.jpg"><img src="./images/np_title_small.jpg"/></a>
+&nbsp;
+<a href="./images/np_l2.jpg"><img src="./images/np_l2_small.jpg"/></a>
+
+<h2>Download</h2>
+
+Releases are available from the <a href="https://garage.maemo.org/frs/?group_id=638">project page...</a><p>
+...or build it yourself from <a href="https://garage.maemo.org/scm/?group_id=638">SVN</a>.
+
+<h2>Documentation</h2>
+
+<h3>Play</h3>
+
+<b>Keys:</b><p>
+<table>
+<tr><td>stylus</td><td>draw a new stroke</td></tr>
+<tr><td>space or enter (d-pad centre)</td><td>pause/unpause physics</td></tr>
+<tr><td>esc (back arrow)</td><td>undo last stroke</td></tr>
+<tr><td>esc (back arrow) hold</td><td>quit</td></tr>
+<tr><td>r or up</td><td>reset level to initial state</td></tr>
+<tr><td>n or right</td><td>skip to next level</td></tr>
+<tr><td>p or left</td><td>go to previous level</td></tr>
+<tr><td>e or fullscreen</td><td>edit mode</td></tr>
+</table>
+
+<b>Hints:</b><p>
+
+Each stroke is like a rigid piece of wire with a mass proportional to
+its length. A closed stroke is just a wire bent into a shape, it has
+no substance apart from its perimeter.<p>
+
+The ends of a strokes can (and will) join onto other strokes when
+drawn near enough to another stroke.  These joints are pivots so you
+can use this to build levers, pendulums and other mechanical
+wonders.  Jointed strokes don't collide with each other.<p>
+
+Know bugs: undo can go too far.  Goal object does not respawn if lost.
+
+
+<h3>Editing</h3>
+
+<b>Keys:</b> (as per play mode plus the following)<p>
+<table>
+<tr><td>e or fullscreen</td><td>leave edit mode</td></tr>
+<tr><td>s or menu</td><td>save to ~/.numptyphsyics/L99_saved.nph</td></tr>
+<tr><td>zoom-minus + stylus</td><td>delete stroke at point</td></tr>
+<tr><td>zoom-plus + stylus</td><td>drag stroke at point</td></tr>
+</table><p>
+
+<b>Hints:</b><p>
+
+It's handy to pause the physics when making a new level though this
+is by no means necessary.  Sometimes it is handy to let the physics
+run for a little bit just to let the items settle down.<p>
+
+From the editor palette you can choose the crayon colour and then
+additional properties such as:<p>
+
+<ul>
+
+<li>ground (earth arrow) - stroke is fixed in place.
+
+<li>sleeping (Zzz) - stroke is not subject to physics until bumped by
+something else.
+
+<li>decorator (not shown) - stroke is not part of the physical
+world. eg: tutorial text.
+
+</ul>
+
+Remember to set sensible properties and colour before exiting the
+editor!<p>
+
+You should make sure that your level has at least one red item (player
+token) and at least one yellow item (goal item).<p>
+
+Token strokes will only join to other token strokes.  Goal strokes
+will only join to goal strokes.  Other strokes will happily join to
+any non-token non-goal strokes.<p>
+
+If this is your first time, you may need to restart the game for your
+saved L99 to show up.<p>
+
+Editor bugs: move stroke is broken; delete stroke sometimes leaves a
+new tiny stroke where you tapped (you can undo this at least).  There
+is not yet any provision to name your level but you can just rename
+the file. <p>
+
+</body>
