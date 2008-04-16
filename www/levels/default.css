@@ -1,0 +1,19 @@
+div.collection {
+border: 8px #ffffff;
+background: #dddd88;
+padding-left: 10px;
+padding-right: 10px;
+}
+div.level {
+margin: 10px auto;	
+border: 8px dashed #0000;
+float: left;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
+text-align: center;
+}
+div.spacer {
+clear: both;
+}
