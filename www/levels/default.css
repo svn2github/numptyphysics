@@ -1,19 +1,40 @@
-div.collection {
+div.header {
 border: 8px #ffffff;
-background: #dddd88;
+background: #efebd4;
 padding-left: 10px;
 padding-right: 10px;
+text-align: center;
+}
+div.collection {
+border: 8px #ffffff;
+background: #efebd4;
+padding-left: 10px;
+padding-right: 10px;
+}
+div.collection h2 {
+color: #444444;
 }
 div.level {
 margin: 10px auto;	
 border: 8px dashed #0000;
 float: left;
-padding-top: 5px;
-padding-bottom: 5px;
-padding-left: 5px;
-padding-right: 5px;
-text-align: center;
+padding: 1%;
+text-align: left;
+}
+span.buttons {
+float: right;
+}
+span.name {
+float: left;
 }
 div.spacer {
 clear: both;
+}
+a:link {
+text-decoration: none;
+color: #444444;
+}
+a:visited {
+text-decoration: none;
+color: #444444;
 }
