@@ -25,7 +25,7 @@ for d in ${BASE}/*; do
   if [ `find $d -name \*.nph | wc -l` -gt 0 ]; then
     echo "<div class=\"collection\"><h2>"`basename $d`"</h2><p>"
     echo "<div class="spacer">&nbsp;</div>"
-    for f in `find $d -name \*.nph`; do
+    for f in `find $d -name \*.nph`; do 
 	THUMB=thumbs/`echo $f | tr /. __`.jpg
 	if [ ! -e ${THUMB} ]; then
 	    #(${NP} $f) && \
