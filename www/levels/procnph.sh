@@ -11,6 +11,7 @@ J=$1
 N=$2
 echo '<html><head>' \
     '<link rel="stylesheet" href="default.css" type="text/css"/></head><body>' \
+    '<link rel="alternate" type="application/rss+xml" title="RSS Level Feed." href="http://numptyphysics.garage.maemo.org/levels/npcomplete.rss"/>' \
     '<div class=\"header\">' \
     '<h1><a href="http://numptyphysics.garage.maemo.org">NP</a>-complete</h1>'
 while [ $I -lt $N ] ; do    
