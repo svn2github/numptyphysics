@@ -13,7 +13,7 @@ echo '<?xml version="1.0"?><rss version="2.0"><channel>' \
 # set $IFS to end-of-line
 IFS=`echo -en "\n\b"`
 
-for line in `cat log | egrep '(A .*\.nph$|r[0-9]+.*line)'`; do
+for line in `svn log -v | egrep '(A .*\.nph$|r[0-9]+.*line)'`; do
   TESTDATE=`echo "$line" | egrep 'r[0-9]+.*line' | cut -d\| -f3 | cut -d\( -f1`
   if [ -n "$TESTDATE" ]; then      
     DATE=$TESTDATE
