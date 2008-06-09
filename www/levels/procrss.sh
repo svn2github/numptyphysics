@@ -4,6 +4,7 @@ NUM=0
 MAX=15
 NPTPROOT='nptp://numptyphysics.garage.maemo.org/levels/'
 HTTPROOT='http://numptyphysics.garage.maemo.org/levels/'
+SVNROOT='https://garage.maemo.org/svn/numptyphysics/www/levels'
 DATE=`date`
 
 echo '<?xml version="1.0"?><rss version="2.0"><channel>' \
@@ -13,7 +14,7 @@ echo '<?xml version="1.0"?><rss version="2.0"><channel>' \
 
 IFS=`echo -en "\n\b"` # process log line by line
 
-for line in `svn log -v | egrep '(A .*\.nph$|r[0-9]+.*line)'`; do
+for line in `svn log -v $SVNROOT | egrep '(A .*\.nph$|r[0-9]+.*line)'`; do
   TESTDATE=`echo "$line" | egrep 'r[0-9]+.*line' | cut -d\| -f3 | cut -d\( -f1`
   if [ -n "$TESTDATE" ]; then      
     DATE=$TESTDATE
