@@ -1,7 +1,7 @@
 #!/bin/bash
 BASE=$1
 NP='echo' #cd ../../Scratchbox/numptyphysics-0.1 && ./x86_64/Game -bmp'
-NPTPROOT='nptp://numptyphysics.garage.maemo.org/levels/'
+NPTPROOT='http://numptyphysics.garage.maemo.org/levels/'
 GEOM='200x120'
 
 header()
