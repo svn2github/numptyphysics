@@ -2,7 +2,7 @@
 
 NUM=0
 MAX=15
-NPTPROOT='http://numptyphysics.garage.maemo.org/levels/'
+NPTPROOT='nptp://numptyphysics.garage.maemo.org/levels/'
 HTTPROOT='http://numptyphysics.garage.maemo.org/levels/'
 SVNROOT='https://garage.maemo.org/svn/numptyphysics/www/levels'
 DATE=`date`
