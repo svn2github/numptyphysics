@@ -29,7 +29,6 @@ for d in ${BASE}/*; do
     echo "<div class="spacer">&nbsp;</div>"
     for f in `find $d -name \*.nph`; do 
 	THUMB=thumbs/`echo "$f" | tr /.\   __`.jpg
-	echo THUMB=${THUMB}
 	if [ ! -e ${THUMB} ]; then
 	    #(${NP} $f) && \
 	    convert "$f.bmp" -geometry ${GEOM} ${THUMB} && rm $f.bmp
