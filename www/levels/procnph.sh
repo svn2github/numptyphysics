@@ -1,4 +1,5 @@
 #!/bin/bash
+IFS=$'\n'
 BASE=$1
 NP='echo' #cd ../../Scratchbox/numptyphysics-0.1 && ./x86_64/Game -bmp'
 NPTPROOT='http://numptyphysics.garage.maemo.org/levels/'
@@ -27,10 +28,11 @@ for d in ${BASE}/*; do
     echo "<div class=\"collection\"><h2>"`basename $d`"</h2><p>"
     echo "<div class="spacer">&nbsp;</div>"
     for f in `find $d -name \*.nph`; do 
-	THUMB=thumbs/`echo $f | tr /. __`.jpg
+	THUMB=thumbs/`echo "$f" | tr /.\   __`.jpg
+	echo THUMB=${THUMB}
 	if [ ! -e ${THUMB} ]; then
 	    #(${NP} $f) && \
-	    convert $f.bmp -geometry ${GEOM} ${THUMB} && rm $f.bmp
+	    convert "$f.bmp" -geometry ${GEOM} ${THUMB} && rm $f.bmp
 	fi
 	echo "<div class=\"level\"><a href=\"${NPTPROOT}$f\">" \
 	    "<img src=\"${THUMB}\"/><br>" \
