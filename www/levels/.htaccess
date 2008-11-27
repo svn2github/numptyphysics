@@ -1,1 +1,2 @@
 AddType application/x-numptyphysics-level nph
+AddType application/x-numptyphysics-collection npz

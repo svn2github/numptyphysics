@@ -25,9 +25,12 @@ echo '</div>'
 header 1 6
 for d in ${BASE}/*; do
   if [ `find $d -name \*.nph | wc -l` -gt 0 ]; then
-    echo "<div class=\"collection\"><h2>"`basename $d`"</h2><p>"
-    echo "<div class="spacer">&nbsp;</div>"
+    COLL="$d/$d.npz";
+    echo "<div class=\"collection\"><h2>"`basename $d`"</h2>"
     for f in `find $d -name \*.nph`; do 
+	#if [ ! unzip -l "$COLL" | grep "$f" ]; then
+          zip "$COLL" "$f" >/dev/null
+	#fi
 	THUMB=thumbs/`echo "$f" | tr /.\   __`.jpg
 	if [ ! -e ${THUMB} ]; then
 	    #(${NP} $f) && \
@@ -36,11 +39,13 @@ for d in ${BASE}/*; do
 	echo "<div class=\"level\"><a href=\"${NPTPROOT}$f\">" \
 	    "<img src=\"${THUMB}\"/><br>" \
 	    "<span class=\"name\">"`basename $f .nph`"</span></a>" \
-	    "<span class=\"buttons\">" \
-	    "<a href=\"${NPTPROOT}$f\"><img alt=\"play\" src=\"/images/play.gif\"/></a>" \
-	    "<a href=\"$f\"><img alt=\"save\" src=\"/images/save.gif\"/></a>" \
-	    "</span></div>"
+	    "<span class=\"buttons\">"
+	    #"<a href=\"${NPTPROOT}$f\"><img alt=\"play\" src=\"/images/play.gif\"/></a>" \
+	    #"<a href=\"$f\"><img alt=\"save\" src=\"/images/save.gif\"/></a>" \
+	echo "</span></div>"
     done
+    echo "<div class=\"level\"><a href=\"$COLL\"><img alt=\"all "
+    echo `basename "$d"`"\" src=\"/images/all.gif\"/></a></div>"
     echo "<div class="spacer">&nbsp;</div>"
     echo "</div>"
   fi
