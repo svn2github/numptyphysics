@@ -1,0 +1,50 @@
+Source: numptyphysics
+Section: user/games
+Priority: optional
+Maintainer: Tim Edmonds <tmedmonds@gmail.com>
+Build-Depends: debhelper (>> 5.0.0), dh-buildinfo, libsdl1.2-dev, libsdl-image1.2-dev
+Standards-Version: 3.7.2
+
+Package: numptyphysics
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: crayon based physics puzzle game
+XB-Maemo-Icon-26:
+ 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
+ l4RD8j9OVn/MOMzvhAAAAABJRU5ErkJggg==
